@@ -24,7 +24,7 @@ function AmicablePairsFunc(maxNum: number) {
     let result = [];
     for (let n = 2; n <= maxNum; n++) {
         const m = myNumbers.get(n);
-        if (n !== m && myNumbers.get(m) === n && n < m) {
+        if (myNumbers.get(m) === n && n < m) {
             result.push([n, m]);
         }
     }
