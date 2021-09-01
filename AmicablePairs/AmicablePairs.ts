@@ -20,12 +20,12 @@ function getNumbersAndSumOfDivisors(maxNum: number) {
 }
 
 function AmicablePairsFunc(maxNum: number) {
-    const myNumbers = getNumbersAndSumOfDivisors(maxNum);
+    let myNumbers = getNumbersAndSumOfDivisors(maxNum);
     let result = [];
-    for(let n=2;n<=maxNum;n++){
+    for (let n = 2; n <= maxNum; n++) {
         const m = myNumbers.get(n);
-        if(n!==m && myNumbers.get(m)===n){
-            result.push([n,m]);
+        if (n !== m && myNumbers.get(m) === n && n < m) {
+            result.push([n, m]);
         }
     }
     return result;
